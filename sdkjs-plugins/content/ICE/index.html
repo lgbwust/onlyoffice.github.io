@@ -10,11 +10,32 @@
     <script src="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js"></script>
     <!-- 这里的 main.js 就是插件结构里面的 main.js -->
     <script src="main.js"></script>
+    <style>
+      #buttonContainer {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
+      #addText {
+        padding: 10px 20px;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
   </head>
 
   <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
-    <button id="addText" style="padding: 10px 20px; font-size: 20px; border: none; border-radius: 5px; background-color: #4CAF50; color: white; cursor: pointer;">
-      添加
-    </button>
+    <div id="buttonContainer">
+        <button id="addText" style="padding: 10px 20px; font-size: 20px; border: none; border-radius: 5px; background-color: #4CAF50; color: white; cursor: pointer;">
+          添加
+        </button>
+    </div>
   </body>
 </html>
