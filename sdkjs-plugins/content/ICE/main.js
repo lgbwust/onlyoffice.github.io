@@ -14,7 +14,7 @@
 		 var oDocument = Api.GetDocument();
                var oBookmarks = oDocument.GetBookmarks(); // 获取所有书签
 
-    // 查找名为 "pic" 的书签
+              // 查找名为 "pic" 的书签
     var oBookmark = oBookmarks.find(function(bookmark) {
         return bookmark.GetName() === "pic";
     });
