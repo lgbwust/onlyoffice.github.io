@@ -12,10 +12,8 @@
   //               oDocument.InsertContent([oParagraph]);
 
 		 var oDocument = Api.GetDocument();
-		console.log(aBookmarks.includes("pic"));
-              // 找到名为 "pic" 的书签
-    if (aBookmarks.includes("pic")) {
-        var oRange = oDocument.GetRangeByName("pic"); // 获取名为 "pic" 的书签的范围
+		
+        oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
         var oParagraph = Api.CreateParagraph();
         
         // 创建并添加图片
@@ -24,9 +22,7 @@
 
         // 将图片插入到书签位置
         oRange.Replace(oParagraph);
-    } else {
-        console.log("Bookmark 'pic' not found.");
-    }
+   
 		
         } catch (error) {
           console.error(error)
