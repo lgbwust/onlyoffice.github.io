@@ -1,6 +1,6 @@
 {
-	"name": "Bookmark Image Replacer",
-	"guid": "BookmarkImageReplacer",
+	"name": "Test",
+	"guid": "asc.{550EBF13-9B19-4XD8-8621-05200E58140C}",
 	"variations": [{
 		"description": "This plugin finds a specific bookmark and replaces it with an image from a REST API.",
 		"url": "index.html",
