@@ -19,7 +19,7 @@
         var oParagraph =  oRange.GetAllParagraphs(1);
         
         // 创建并添加图片
-        var oImage = Api.CreateImage("https://gzjc-file.ceczy.com/get-file/group1/M00/00/23/rBAAdWSJJRuAKXxFAAAMzQLbvpU491.png", 60 * 36000, 60 * 36000);
+        var oImage = Api.CreateImage("https://gzjc-file.ceczy.com/get-file/group1/M00/00/23/rBAAdWSJJRuAKXxFAAAMzQLbvpU491.png", 20 * 36000, 20 * 36000);
         oParagraph[0].AddDrawing(oImage);
 
    
