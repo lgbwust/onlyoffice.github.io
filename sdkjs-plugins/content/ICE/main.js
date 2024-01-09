@@ -14,6 +14,8 @@
 		 var oDocument = Api.GetDocument();
 		
         var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
+		console.log(oRange);
+		debugger;
         var oParagraph = Api.CreateParagraph();
         
         // 创建并添加图片
