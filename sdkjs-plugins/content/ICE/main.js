@@ -11,18 +11,18 @@
   //               oParagraph.AddDrawing(oImage);
   //               oDocument.InsertContent([oParagraph]);
 
-		 var oDocument = Api.GetDocument();
-		
-        var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
-		console.log(oRange);
-		debugger;
-        var oParagraphs =  oRange.GetAllParagraphs(1);
+	// 获取文档对象
+	var oDocument = Api.GetDocument();
+	// 获取名为 "pic" 的书签的范围
+        var oRange = oDocument.GetBookmarkRange("pic"); 
+        console.log(oRange);
+	debugger;
+	// 获取段落
+        var oParagraph =  oRange.GetAllParagraphs(1);
         
         // 创建并添加图片
-        var oImage = Api.CreateImage("https://img1.baidu.com/it/u=541513058,783072912&fm=253&fmt=auto&app=138&f=PNG?w=250&h=250", 30 * 36000, 30 * 36000);
-        // oParagraph[0].AddDrawing(oImage);
-	// 在段落的开始位置添加图片
-        oParagraphs[0].AddElement(0, oImage);
+        var oImage = Api.CreateImage("https://img1.baidu.com/it/u=541513058,783072912&fm=253&fmt=auto&app=138&f=PNG?w=250&h=250", 40 * 36000, 40 * 36000);
+        oParagraph[0].AddDrawing(oImage);
 
    
 		
