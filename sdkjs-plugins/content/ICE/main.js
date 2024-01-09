@@ -7,6 +7,11 @@
         try {
              var imageUrl = "https://gzjc-file.ceczy.com/get-file/group1/M00/00/23/rBAAdWSJJRuAKXxFAAAMzQLbvpU491.png"; // 替换为您的图片 URL
             window.Asc.plugin.executeMethod("AddImage", [imageUrl]);
+		var oDocument = Api.GetDocument();
+                var oParagraph = Api.CreateParagraph();
+                var oImage = Api.CreateImage("https://gzjc-file.ceczy.com/get-file/group1/M00/00/23/rBAAdWSJJRuAKXxFAAAMzQLbvpU491.png", 60 * 36000, 60 * 36000);
+                oParagraph.AddDrawing(oImage);
+                oDocument.InsertContent([oParagraph]);
         } catch (error) {
           console.error(error)
         }
