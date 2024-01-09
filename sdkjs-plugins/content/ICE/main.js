@@ -12,19 +12,14 @@
   //               oDocument.InsertContent([oParagraph]);
 
 		 var oDocument = Api.GetDocument();
-               var oBookmarks = oDocument.GetAllBookmarksNames(); // 获取所有书签
-
-              // 查找名为 "pic" 的书签
-    var oBookmark = oBookmarks.find(function(bookmark) {
-        return bookmark.GetName() === "pic";
-    });
-
-    if (oBookmark) {
-        var oRange = oBookmark.GetRange(); // 获取书签的范围
-        var oParagraph = oRange.GetParagraph(); // 获取书签所在的段落
-
+		console.log(aBookmarks.includes("pic"));
+              // 找到名为 "pic" 的书签
+    if (aBookmarks.includes("pic")) {
+        var oRange = oDocument.GetRangeByName("pic"); // 获取名为 "pic" 的书签的范围
+        var oParagraph = Api.CreateParagraph();
+        
         // 创建并添加图片
-        var oImage = Api.CreateImage("https://api.onlyoffice.com/content/img/docbuilder/examples/api-cell.png", 60 * 36000, 60 * 36000);
+        var oImage = Api.CreateImage("https://gzjc-file.ceczy.com/get-file/group1/M00/00/23/rBAAdWSJJRuAKXxFAAAMzQLbvpU491.png", 60 * 36000, 60 * 36000);
         oParagraph.AddDrawing(oImage);
 
         // 将图片插入到书签位置
