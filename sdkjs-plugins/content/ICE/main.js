@@ -20,7 +20,9 @@
         
         // 创建并添加图片
         var oImage = Api.CreateImage("https://img1.baidu.com/it/u=541513058,783072912&fm=253&fmt=auto&app=138&f=PNG?w=250&h=250", 30 * 36000, 30 * 36000);
-        oParagraph[0].AddDrawing(oImage);
+        // oParagraph[0].AddDrawing(oImage);
+	// 在段落的开始位置添加图片
+        oParagraphs[0].AddElement(0, oImage);
 
    
 		
