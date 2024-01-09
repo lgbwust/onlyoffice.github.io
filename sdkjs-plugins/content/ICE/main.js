@@ -16,7 +16,7 @@
         var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
 		console.log(oRange);
 		debugger;
-        var oParagraph =  oRange.GetAllParagraphs(1);
+        var oParagraphs =  oRange.GetAllParagraphs(1);
         
         // 创建并添加图片
         var oImage = Api.CreateImage("https://img1.baidu.com/it/u=541513058,783072912&fm=253&fmt=auto&app=138&f=PNG?w=250&h=250", 30 * 36000, 30 * 36000);
