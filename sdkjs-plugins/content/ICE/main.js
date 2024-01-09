@@ -16,7 +16,7 @@
 	  // 获取文档对象
             var oDocument = Api.GetDocument()
             // 从网络获取图片
-            var imageUrl = ' https://gzjc-file.ceczy.com/get-file/group1/M00/00/23/rBAAdWSJJRuAKXxFAAAMzQLbvpU491.png' // 请替换为你的图片 URL
+            var imageUrl = 'https://gzjc-file.ceczy.com/get-file/group1/M00/00/23/rBAAdWSJJRuAKXxFAAAMzQLbvpU491.png' // 请替换为你的图片 URL
             var xhr = new XMLHttpRequest()
             xhr.open('GET', imageUrl, true)
             xhr.responseType = 'blob'
