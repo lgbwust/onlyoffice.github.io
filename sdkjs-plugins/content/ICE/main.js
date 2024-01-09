@@ -2,7 +2,7 @@
   window.Asc.plugin.init = function(initData) {
     var me = this
     $('#addText').click(function() {
-      // 官方提供的回调函数，所有操作文档的 API 都可以在这里面使用
+      // 官方提供的回调函数==>所有操作文档的 API 都可以在这里面使用
       me.callCommand(function() {
         try {
 		var oDocument = Api.GetDocument();
