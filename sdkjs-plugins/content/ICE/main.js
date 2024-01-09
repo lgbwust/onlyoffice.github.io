@@ -20,7 +20,7 @@
         
         // 创建并添加图片
         var oImage = Api.CreateImage("https://gzjc-file.ceczy.com/get-file/group1/M00/00/23/rBAAdWSJJRuAKXxFAAAMzQLbvpU491.png", 60 * 36000, 60 * 36000);
-        oParagraph.AddDrawing(oImage);
+        oParagraph[0].AddDrawing(oImage);
 
    
 		
