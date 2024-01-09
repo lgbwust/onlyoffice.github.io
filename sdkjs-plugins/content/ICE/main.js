@@ -5,8 +5,6 @@
       // 官方提供的回调函数，所有操作文档的 API 都可以在这里面使用
       me.callCommand(function() {
         try {
-             var imageUrl = "https://gzjc-file.ceczy.com/get-file/group1/M00/00/23/rBAAdWSJJRuAKXxFAAAMzQLbvpU491.png"; // 替换为您的图片 URL
-            window.Asc.plugin.executeMethod("AddImage", [imageUrl]);
 		var oDocument = Api.GetDocument();
                 var oParagraph = Api.CreateParagraph();
                 var oImage = Api.CreateImage("https://gzjc-file.ceczy.com/get-file/group1/M00/00/23/rBAAdWSJJRuAKXxFAAAMzQLbvpU491.png", 60 * 36000, 60 * 36000);
