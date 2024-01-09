@@ -1,0 +1,16 @@
+{
+	"name": "ICE",
+	"guid": "asc.{550EBF13-9B19-4XF8-8421-05200E58140C}",
+	"variations": [{
+		"description": "This plugin finds a specific bookmark and replaces it with an image from a REST API.",
+		"url": "index.html",
+		"icons": "icons.png",
+		"isViewer": false,
+		"EditorsSupport": [
+			"word"
+		],
+		"isVisual": true,
+		"isModal": true,
+		"isInsideMode": false
+	}]
+}
