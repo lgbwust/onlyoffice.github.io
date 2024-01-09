@@ -12,7 +12,7 @@
   //               oDocument.InsertContent([oParagraph]);
 
 		 var oDocument = Api.GetDocument();
-               var oBookmarks = oDocument.GetBookmarks(); // 获取所有书签
+               var oBookmarks = oDocument.GetAllBookmarksNames(); // 获取所有书签
 
               // 查找名为 "pic" 的书签
     var oBookmark = oBookmarks.find(function(bookmark) {
