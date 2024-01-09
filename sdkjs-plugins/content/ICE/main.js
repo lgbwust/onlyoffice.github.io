@@ -16,14 +16,12 @@
         var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
 		console.log(oRange);
 		debugger;
-        var oParagraph = Api.CreateParagraph();
+        var oParagraph =  oRange.GetParagraph();
         
         // 创建并添加图片
         var oImage = Api.CreateImage("https://gzjc-file.ceczy.com/get-file/group1/M00/00/23/rBAAdWSJJRuAKXxFAAAMzQLbvpU491.png", 60 * 36000, 60 * 36000);
         oParagraph.AddDrawing(oImage);
 
-        // 将图片插入到书签位置
-        oRange.Replace(oParagraph);
    
 		
         } catch (error) {
