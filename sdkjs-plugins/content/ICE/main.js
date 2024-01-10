@@ -27,31 +27,27 @@
 
 
 
-		async function fetchImage() {
-  try {
-    const response = await fetch('https://vue.ruoyi.vip/prod-api/captchaImage');
-    const data = await response.json();
-    const imgData = data.img;
-    const base64 = 'data:image/gif;base64,' + imgData;
-    return base64;
-  } catch (error) {
+
+var base64;
+$.ajax({
+  url: 'https://vue.ruoyi.vip/prod-api/captchaImage',
+  type: 'GET',
+  async: false,
+  success: function(data) {
+    var imgData = data.img;
+    base64 = 'data:image/gif;base64,' + imgData;
+  },
+  error: function(error) {
     console.error(error);
   }
-}
+});
+console.log(base64);
 
-async function getImageAndLog() {
-  var baseImg = await fetchImage();
- 
-
-    // 创建并添加图片
-    var oImage = Api.CreateImage(base64, 30 * 36000, 30 * 36000);
-	debugger;
-    oParagraph[0].AddDrawing(oImage);
-}
- var oDocument = Api.GetDocument();
+   var oDocument = Api.GetDocument();
     var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
     var oParagraph =  oRange.GetAllParagraphs(1);
-getImageAndLog();
+    var oImage = Api.CreateImage(base64, 20 * 36000, 10 * 36000);
+    oParagraph[0].AddDrawing(oImage);
 
 
 		
