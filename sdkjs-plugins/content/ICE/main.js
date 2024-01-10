@@ -12,7 +12,7 @@
   //               oDocument.InsertContent([oParagraph]);
 
 	// 获取文档对象
-	var oDocument = Api.GetDocument();
+	// var oDocument = Api.GetDocument();
 	// 获取名为 "pic" 的书签的范围
 	debugger;
  //        var oRange = oDocument.GetBookmarkRange("pic"); 
@@ -28,6 +28,7 @@
          fetch('https://vue.ruoyi.vip/prod-api/captchaImage')
         .then(response => response.json())
         .then(data => {
+	  var oDocument = Api.GetDocument();
           var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
           var oParagraph =  oRange.GetAllParagraphs(1);
           
