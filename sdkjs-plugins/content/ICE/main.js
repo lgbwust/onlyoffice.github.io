@@ -25,18 +25,21 @@
  //        var oImage = Api.CreateImage("https://img1.baidu.com/it/u=541513058,783072912&fm=253&fmt=auto&app=138&f=PNG?w=250&h=250", 40 * 36000, 40 * 36000);
  //        oParagraph[0].AddDrawing(oImage);
 
+	var imgData;
          fetch('https://vue.ruoyi.vip/prod-api/captchaImage')
         .then(response => response.json())
         .then(data => {
-	  var oDocument = Api.GetDocument();
-          var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
-          var oParagraph =  oRange.GetAllParagraphs(1);
-          
-          // 创建并添加图片
-          var oImage = Api.CreateImage('data:image/gif;base64,' + data.img, 30 * 36000, 30 * 36000);
-          oParagraph[0].AddDrawing(oImage);
+	 imgData=data.img;
         })
         .catch(error => console.error(error));
+
+	 var oDocument = Api.GetDocument();
+          var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
+          var oParagraph =  oRange.GetAllParagraphs(1);
+          var base64 = 'data:image/gif;base64,' + imgData;
+          // 创建并添加图片
+          var oImage = Api.CreateImage(base64, 30 * 36000, 30 * 36000);
+          oParagraph[0].AddDrawing(oImage);
 		
         } catch (error) {
           console.error(error)
