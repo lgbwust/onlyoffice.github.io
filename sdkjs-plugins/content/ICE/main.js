@@ -68,6 +68,8 @@ console.log(base64);
 
     window.Asc.plugin.button = function(id) {
       // 被中断或关闭窗口
+        var _info = window.Asc.plugin.info;
+	    console.log(info)
       if (id === -1) {
         this.executeCommand('close', '')
       }
