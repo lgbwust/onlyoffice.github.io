@@ -1,5 +1,8 @@
 (function(window, undefined) {
   window.Asc.plugin.init = function(initData) {
+    console.log('==========>');
+    console.log(initData);
+    console.log('<===========');
     var me = this
     $('#addText').click(function() {
       // 官方提供的回调函数==>所有操作文档的 API 都可以在这里面使用
@@ -67,9 +70,6 @@ console.log(base64);
     }
 
     window.Asc.plugin.button = function(id) {
-      // 被中断或关闭窗口
-        var _info = window.Asc.plugin.info;
-	    console.log(info)
       if (id === -1) {
         this.executeCommand('close', '')
       }
