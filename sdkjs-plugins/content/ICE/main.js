@@ -41,15 +41,16 @@
 
 async function getImageAndLog() {
   var baseImg = await fetchImage();
-  var oDocument = Api.GetDocument();
-    var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
-    var oParagraph =  oRange.GetAllParagraphs(1);
+ 
 
     // 创建并添加图片
     var oImage = Api.CreateImage(base64, 30 * 36000, 30 * 36000);
+	debugger;
     oParagraph[0].AddDrawing(oImage);
 }
-
+ var oDocument = Api.GetDocument();
+    var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
+    var oParagraph =  oRange.GetAllParagraphs(1);
 getImageAndLog();
 
 
