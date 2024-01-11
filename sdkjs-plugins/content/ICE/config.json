@@ -15,7 +15,7 @@
       ],
       "isVisual": true,
       "isModal": false,
-      "initDataType": "none",
+      "initDataType": "asc",
       "initData": "",
       "buttons": [],
       "events" : [
