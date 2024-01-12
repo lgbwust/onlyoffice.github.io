@@ -1,7 +1,11 @@
 (function(window, undefined) {
   window.Asc.plugin.init = function(initData) {
+    debugger;
     console.log('==========>');
-    console.log(initData);
+    window.parent.Common.Gateway.on('internalcommand', function(data){
+    console.log(data.command); // 接受到123参数
+    console.log(data.data); // 接受到321参数
+     });
     console.log('<===========');
     var me = this
     $('#addText').click(function() {
@@ -17,7 +21,6 @@
 	// 获取文档对象
 	// var oDocument = Api.GetDocument();
 	// 获取名为 "pic" 的书签的范围
-	debugger;
  //        var oRange = oDocument.GetBookmarkRange("pic"); 
  //        console.log(oRange);
 
