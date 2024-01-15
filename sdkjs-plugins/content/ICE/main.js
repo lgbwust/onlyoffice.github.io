@@ -6,19 +6,20 @@
         var params = new URLSearchParams(url.search);
         initData = params.get("imgData");
         console.log(initData);
+        this.initData=initData;
         var me = this;
         $('#addText').click(function () {
             // 官方提供的回调函数==>所有操作文档的 API 都可以在这里面使用
             console.log("=======>");
             console.log(initData);
-            me.callCommand(function (initData) {
+            me.callCommand(function () {
                 try {
                     console.log("=======>");
-                    console.log(initData);
+                    console.log(me.initData);
                     var oDocument = Api.GetDocument();
                     var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
                     var oParagraph = oRange.GetAllParagraphs(1);
-                    var oImage = Api.CreateImage(initData, 30 * 36000, 30 * 36000);
+                    var oImage = Api.CreateImage(me.initData, 30 * 36000, 30 * 36000);
                     oParagraph[0].AddDrawing(oImage);
 
                 } catch (error) {
