@@ -1,3 +1,4 @@
+var callback;
 (function(window, undefined) {
   window.Asc.plugin.init = function(initData) {
     debugger;
@@ -6,7 +7,7 @@
     // console.log(data.command); // 接受到123参数
     // console.log(data.data); // 接受到321参数
     //  });
-    var callback="dfdfdfdfdfdfdf";
+    callback="dfdfdfdfdfdfdf";
     console.log('<===========');
     var me = this
     $('#addText').click(function() {
