@@ -9,11 +9,11 @@ var imgData = '';
         console.log(imgData);
         this.imgData=imgData;
         var me = this;
-        $('#addText').click(function () {
+        $('#addText').click( ()=> {
             // 官方提供的回调函数==>所有操作文档的 API 都可以在这里面使用
             console.log("=======>");
             console.log(imgData);
-            me.callCommand(function () {
+            me.callCommand( ()=> {
                 try {
                     debugger
                     console.log("=======>");
