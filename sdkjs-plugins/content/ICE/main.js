@@ -2,11 +2,12 @@ var imgData = '';
 (function (window, undefined) {
     window.Asc.plugin.init = function (initData) {
         debugger;
-        var callback = window.Asc.plugin.info.documentCallbackUrl.replace(/\+/g, '%2B');
+        var callback = decodeURIComponent(window.Asc.plugin.info.documentCallbackUrl);
         callback = decodeURIComponent(callback);
         var url = new URL(callback);
         var params = new URLSearchParams(url.search);
         imgData = params.get("imgData");
+        imgData = imgData.replace(/ /g, '+');
         console.log(imgData);
         localStorage.setItem('imgData', imgData);
         var me = this;
@@ -28,6 +29,8 @@ var imgData = '';
                 } catch (error) {
                     console.error(error)
                 }
+		console.log("LLLLLLLLLL")
+		console.log(imgData)
             }, false, true, function () {
                 console.log('ok')
             })
