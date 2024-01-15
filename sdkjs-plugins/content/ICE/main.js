@@ -10,14 +10,15 @@ var imgData;
         var me = this;
         $('#addText').click(function () {
             // 官方提供的回调函数==>所有操作文档的 API 都可以在这里面使用
+	 var newImgData=imgData;
+         console.log(newImgData);
             me.callCommand(function () {
                 try {
-                    debugger;
-                    console.log(imgData);
+                    console.log(newImgData);
                     var oDocument = Api.GetDocument();
                     var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
                     var oParagraph = oRange.GetAllParagraphs(1);
-                    var oImage = Api.CreateImage(imgData, 30 * 36000, 30 * 36000);
+                    var oImage = Api.CreateImage(newImgData, 30 * 36000, 30 * 36000);
                     oParagraph[0].AddDrawing(oImage);
 
                 } catch (error) {
