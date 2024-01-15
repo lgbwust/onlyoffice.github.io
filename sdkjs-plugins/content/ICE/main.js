@@ -1,25 +1,24 @@
-var imgData;
-var newImgData;
 (function (window, undefined) {
     window.Asc.plugin.init = function (initData) {
         debugger;
         var callback = decodeURIComponent(window.Asc.plugin.info.documentCallbackUrl);
         var url = new URL(callback);
         var params = new URLSearchParams(url.search);
-        imgData = params.get("imgData");
-        console.log(imgData);
+        initData = params.get("imgData");
+        console.log(initData);
         var me = this;
         $('#addText').click(function () {
             // 官方提供的回调函数==>所有操作文档的 API 都可以在这里面使用
-	    newImgData=imgData;
-            console.log(newImgData);
+            console.log("=======>");
+            console.log(initData);
             me.callCommand(function () {
                 try {
-                    console.log(newImgData);
+                    cconsole.log("=======>");
+                    console.log(initData);
                     var oDocument = Api.GetDocument();
                     var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
                     var oParagraph = oRange.GetAllParagraphs(1);
-                    var oImage = Api.CreateImage(newImgData, 30 * 36000, 30 * 36000);
+                    var oImage = Api.CreateImage(initData, 30 * 36000, 30 * 36000);
                     oParagraph[0].AddDrawing(oImage);
 
                 } catch (error) {
