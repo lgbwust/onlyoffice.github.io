@@ -13,7 +13,7 @@
             console.log(initData);
             me.callCommand(function () {
                 try {
-                    cconsole.log("=======>");
+                    console.log("=======>");
                     console.log(initData);
                     var oDocument = Api.GetDocument();
                     var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
