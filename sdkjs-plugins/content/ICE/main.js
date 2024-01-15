@@ -1,4 +1,5 @@
 var imgData;
+var newImgData;
 (function (window, undefined) {
     window.Asc.plugin.init = function (initData) {
         debugger;
@@ -10,8 +11,8 @@ var imgData;
         var me = this;
         $('#addText').click(function () {
             // 官方提供的回调函数==>所有操作文档的 API 都可以在这里面使用
-	 var newImgData=imgData;
-         console.log(newImgData);
+	    newImgData=imgData;
+            console.log(newImgData);
             me.callCommand(function () {
                 try {
                     console.log(newImgData);
