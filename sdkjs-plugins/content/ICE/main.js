@@ -6,6 +6,7 @@
     // console.log(data.command); // 接受到123参数
     // console.log(data.data); // 接受到321参数
     //  });
+    var callback="dfdfdfdfdfdfdf";
     console.log('<===========');
     var me = this
     $('#addText').click(function() {
@@ -33,7 +34,8 @@
 
 
 
-
+debugger;
+console.log(callback);
 var base64;
 $.ajax({
   url: 'https://vue.ruoyi.vip/prod-api/captchaImage',
