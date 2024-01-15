@@ -11,6 +11,8 @@
     var me = this
     $('#addText').click(function() {
       // 官方提供的回调函数==>所有操作文档的 API 都可以在这里面使用
+      var newCallback=callback;
+      console.log(newCallback);
       me.callCommand(function() {
         try {
 		// var oDocument = Api.GetDocument();
@@ -35,7 +37,7 @@
 
 
 debugger;
-console.log(callback);
+console.log(newCallback);
 var base64;
 $.ajax({
   url: 'https://vue.ruoyi.vip/prod-api/captchaImage',
