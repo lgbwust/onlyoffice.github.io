@@ -2,7 +2,8 @@ var imgData = '';
 (function (window, undefined) {
     window.Asc.plugin.init = function (initData) {
         debugger;
-        var callback = decodeURIComponent(window.Asc.plugin.info.documentCallbackUrl);
+        var callback = window.Asc.plugin.info.documentCallbackUrl.replace(/\+/g, '%2B');
+        callback = decodeURIComponent(callback);
         var url = new URL(callback);
         var params = new URLSearchParams(url.search);
         imgData = params.get("imgData");
@@ -16,6 +17,8 @@ var imgData = '';
             me.callCommand( ()=> {
                 try {
                     var storedImgData = localStorage.getItem('imgData');
+                    console.log("storedImgData====>")
+                    console.log(storedImgData);
                     var oDocument = Api.GetDocument();
                     var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
                     var oParagraph = oRange.GetAllParagraphs(1);
