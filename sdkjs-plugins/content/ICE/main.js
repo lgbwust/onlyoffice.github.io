@@ -2,10 +2,10 @@
   window.Asc.plugin.init = function(initData) {
     debugger;
     console.log('==========>');
-    window.parent.Common.Gateway.on('internalcommand', function(data){
-    console.log(data.command); // 接受到123参数
-    console.log(data.data); // 接受到321参数
-     });
+    // window.parent.Common.Gateway.on('internalcommand', function(data){
+    // console.log(data.command); // 接受到123参数
+    // console.log(data.data); // 接受到321参数
+    //  });
     console.log('<===========');
     var me = this
     $('#addText').click(function() {
