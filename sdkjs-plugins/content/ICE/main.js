@@ -111,7 +111,7 @@ $.ajax({
     var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
     var oParagraph =  oRange.GetAllParagraphs(1);
     var oImage = Api.CreateImage(base64, 20 * 36000, 10 * 36000);
-    oDrawing.put_InLine(false);
+    oImage.put_InLine(false);
     oParagraph[0].AddDrawing(oImage);
 
 
