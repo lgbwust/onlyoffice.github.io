@@ -56,7 +56,6 @@
 
 
 
-var callback;
 (function(window, undefined) {
   window.Asc.plugin.init = function(initData) {
     debugger;
@@ -66,7 +65,6 @@ var callback;
     // console.log(data.data); // 接受到321参数
     //  });
     callback="dfdfdfdfdfdfdf";
-    console.log('1<===========');
     var me = this
     $('#addText').click(function() {
       // 官方提供的回调函数==>所有操作文档的 API 都可以在这里面使用
@@ -96,8 +94,6 @@ var callback;
 
 
 
-console.log(newCallback);
-console.log('3<===========');
 var base64;
 $.ajax({
   url: 'https://vue.ruoyi.vip/prod-api/captchaImage',
@@ -111,9 +107,6 @@ $.ajax({
     console.error(error);
   }
 });
-console.log(base64);
-console.log(newCallback);
-console.log('4<===========');
    var oDocument = Api.GetDocument();
     var oRange = oDocument.GetBookmarkRange("pic"); // 获取名为 "pic" 的书签的范围
     var oParagraph =  oRange.GetAllParagraphs(1);
